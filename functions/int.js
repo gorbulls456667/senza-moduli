@@ -38,8 +38,11 @@ exports.handler = (event, context, callback) => {
     amount: 1099,
     currency: 'eur',
     payment_method_types: ['card'],
-  },
-	console.log(paymentIntent);
+  }, function(err, charge) {
+  // asynchronously called
+	  console.log(paymentIntent);
+	}
+	
 						  );
 })();
 
