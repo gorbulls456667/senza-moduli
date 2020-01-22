@@ -45,7 +45,7 @@ exports.handler = (event, context, callback) => {
 		callback(null, {
 			statusCode,
 			headers,
-			body: JSON.stringify({paymentIntent})
+			body: /*JSON.stringify({paymentIntent})*/  paymentIntent
 		});
 	}
 	);
