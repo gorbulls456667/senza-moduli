@@ -42,7 +42,7 @@ exports.handler = (event, context, callback) => {
                 console.log(paymentIntent.client_secret);
                   callback(null, {
                     statusCode: 200,
-                    body: JSON.stringify({paymentIntent.client_secret})
+                    body: JSON.stringify({paymentIntent})
                   })
             }
 
