@@ -29,7 +29,7 @@ exports.handler = (event, context, callback) => {
 	const stripe = require('stripe')('sk_test_Gv4Jqwx4XttgEV2Xgl2xAieB00ESIjywnI');
 
 
-	const paymentIntent = await stripe.paymentIntents.create(
+	const paymentIntent = stripe.paymentIntents.create(
 	{
 		amount: 1099,
 		currency: 'eur',
