@@ -1,4 +1,3 @@
-Learn more or give us feedback
 /*exports.handler = (event, context, callback) => {
   var stripe = require('stripe')('sk_test_Gv4Jqwx4XttgEV2Xgl2xAieB00ESIjywnI');
   console.log(stripe);
