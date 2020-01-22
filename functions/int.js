@@ -37,7 +37,7 @@ exports.handler = (event, context, callback) => {
                 amount: 1099,
                 currency: 'eur',
                 payment_method_types: ['card'],
-            }, function(err, charge) {
+            }, function(err, paymentIntent) {
                 // asynchronously called
                 console.log(paymentIntent);
             }
