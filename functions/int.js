@@ -33,21 +33,12 @@ const stripe = require('stripe')('sk_test_Gv4Jqwx4XttgEV2Xgl2xAieB00ESIjywnI');
 exports.handler = (event, context, callback) => {
 
 	
-	
-	(async () => {
+(async () => {
   const paymentIntent = await stripe.paymentIntents.create({
     amount: 1099,
     currency: 'eur',
     payment_method_types: ['card'],
-  },
-  function(err, paymentIntent) {
-    callback(null, {
-      statusCode,
-      headers,
-      body: JSON.stringify({paymentIntent.client_secret})
-    });
-  }
-  );
+  });
 })();
 
 
