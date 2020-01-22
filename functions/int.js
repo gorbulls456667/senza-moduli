@@ -40,7 +40,7 @@ exports.handler = (event, context, callback) => {
     payment_method_types: ['card'],
   }, function(err, charge) {
   // asynchronously called
-	  console.log(paymentIntent);
+	  console.log(paymentIntent.client_secret);
 	}
 	
 						  );
