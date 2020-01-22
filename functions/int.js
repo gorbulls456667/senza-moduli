@@ -5,7 +5,7 @@ exports.handler = (event, context, callback) => {
 
 	stripe.paymentIntents.create(
 	  {
-	    amount: 400000,
+	    amount: 123000,
 	    currency: 'eur',
 	    payment_method_types: ['card'],
 	  },
