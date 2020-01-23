@@ -30,7 +30,7 @@ const stripe = require('stripe')('sk_test_Gv4Jqwx4XttgEV2Xgl2xAieB00ESIjywnI');
 
 
 exports.handler = (event, context, callback) => {
-
+console.log(event);
 
     (async () => {
         const paymentIntent = await stripe.paymentIntents.create({
