@@ -28,12 +28,13 @@ exports.handler = function(event, context, callback) {
                     statusCode: 200,
                     body: "Eccolo!!! " + paymentIntent.client_secret,
                 });
-            } else {
-                callback(null, {
-                    statusCode: 200,
-                    body: "Non si sa che cazzo è successo"
-                });
-            }
+            } 
+            // else {
+            //     callback(null, {
+            //         statusCode: 200,
+            //         body: "Non si sa che cazzo è successo"
+            //     });
+            // }
         }
     );
 }
