@@ -16,13 +16,14 @@ exports.handler = function(event, context, callback) {
         payment_method_types: ['card'],
     }).then(
         function(err, paymentIntent) {
-            // asynchronously called
-            if (err) {
-                callback(null, {
-                    statusCode: 200,
-                    body: "Errore :" + err.message + ", codice errore " + err.code,
-                });
-            } else if (paymentIntent) {
+            // // asynchronously called
+            // if (err) {
+            //     callback(null, {
+            //         statusCode: 200,
+            //         body: "Errore :" + err.message + ", codice errore " + err.code,
+            //     });
+            // } else 
+            if (paymentIntent) {
                 callback(null, {
                     statusCode: 200,
                     body: "Eccolo!!! " + paymentIntent.client_secret,
