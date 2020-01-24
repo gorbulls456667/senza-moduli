@@ -21,10 +21,10 @@ exports.handler = function(event, context, callback) {
             //         body: "Errore :" + err.message + ", codice errore " + err.code,
             //     });
             // } else 
-            if (paymentIntent) {
+            if (test) {
                 callback(null, {
                     statusCode: 200,
-                    body: "Eccolo!!! " + paymentIntent.client_secret,
+                    body: "Eccolo!!! " + test.client_secret,
                 });
             } 
             // else {
