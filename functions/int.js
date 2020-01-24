@@ -24,7 +24,7 @@ exports.handler = function(event, context, callback) {
             } else if (paymentIntent) {
                 callback(null, {
                     statusCode: 200,
-                    body: "Ecco ${paymentIntent}"
+                    body: "Ecco \"paymentIntent\""
                 });
             } else {
                 callback(null, {
