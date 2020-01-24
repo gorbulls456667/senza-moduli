@@ -4,9 +4,7 @@ var headers = {
     "Access-Control-Allow-Headers": "Content-Type"
 };
 
-var stripe = require('stripe')('sk_test_Gv4Jqwx4XttgEV2Xgl2xAieB00ESIjywnI', {
-  maxNetworkRetries: 2, // Retry a request twice before giving up
-});
+var stripe = require('stripe')('sk_test_Gv4Jqwx4XttgEV2Xgl2xAieB00ESIjywnI');
 
 exports.handler = function(event, context, callback) {
 
