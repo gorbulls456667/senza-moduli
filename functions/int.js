@@ -6,20 +6,19 @@ var headers = {
 
 var stripe = require('stripe')('sk_test_Gv4Jqwx4XttgEV2Xgl2xAieB00ESIjywnI');
 
-
 exports.handler = function(event, context, callback) {
 
     var intento = stripe.paymentIntents.create({
-            amount: 2000,
-            currency: 'eur',
-            payment_method_types: ['card'],
-        },
+        amount: 2000,
+        currency: 'eur',
+        payment_method_types: ['card'],
+    }).then(
         function(err, paymentIntent) {
             // asynchronously called
             if (err) {
                 callback(null, {
                     statusCode: 200,
-                    body: "Errore"
+                    body: err.message,
                 });
             } else if (paymentIntent) {
                 callback(null, {
@@ -30,14 +29,7 @@ exports.handler = function(event, context, callback) {
                 callback(null, {
                     statusCode: 200,
                     body: "Non si sa che cazzo è successo"
-                });            
+                });
             }
         }
     );
-
-
-
-
-};
-
-
