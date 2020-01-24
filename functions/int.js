@@ -10,7 +10,7 @@ var stripe = require('stripe')('sk_test_Gv4Jqwx4XttgEV2Xgl2xAieB00ESIjywnI', {
 
 exports.handler = function(event, context, callback) {
 
-    stripe.paymentIntents.create({
+    var test = stripe.paymentIntents.create({
         amount: 2000,
         currency: 'eur',
         payment_method_types: ['card'],
@@ -26,7 +26,7 @@ exports.handler = function(event, context, callback) {
             //if (paymentIntent) {
                 callback(null, {
                     statusCode: 200,
-                    body: "Eccolo!!! " + paymentIntent.client_secret,
+                    body: "Eccolo!!! " + test.client_secret,
                 });
             //} 
             // else {
