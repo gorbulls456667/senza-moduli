@@ -24,7 +24,7 @@ exports.handler = function(event, context, callback) {
             //if (paymentIntent) {
                 callback(null, {
                     statusCode: 200,
-                    body: "Eccolo!!! " + test.client_secret,
+                    body: "Eccolo!!! " + paymentIntent.client_secret,
                 });
             //} 
             // else {
