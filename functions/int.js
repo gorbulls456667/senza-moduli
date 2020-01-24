@@ -18,7 +18,7 @@ exports.handler = function(event, context, callback) {
             if (err) {
                 callback(null, {
                     statusCode: 200,
-                    body: err.message,
+                    body: "Errore :" + err.message + ", codice errore " + err.code,
                 });
             } else if (paymentIntent) {
                 callback(null, {
