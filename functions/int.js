@@ -10,7 +10,7 @@ var stripe = require('stripe')('sk_test_Gv4Jqwx4XttgEV2Xgl2xAieB00ESIjywnI', {
 
 exports.handler = function(event, context, callback) {
 
-    var paymentIntent = stripe.paymentIntents.create({
+    stripe.paymentIntents.create({
         amount: 2000,
         currency: 'eur',
         payment_method_types: ['card'],
